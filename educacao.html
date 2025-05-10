@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Período de Defeso</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <h1>Período de Defeso</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="regras.html">Regras</a></li>
+        <li><a href="denuncia.html">Denúncia</a></li>
+        <li><a href="direitos.html">Direitos</a></li>
+        <li><a href="educacao.html">Educação</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="containe">
+    <section class="mt-4">
+      <h2>O que é o Defeso?</h2>
+      <p>
+        O período de defeso é uma medida de proteção à reprodução das espécies aquáticas. Durante esse tempo, atividades como a pesca são limitadas ou proibidas para preservar o ciclo natural dos peixes.
+      </p>
+    </section>
+  
+    <section class="mt-4">
+      <h2>Importância da Educação Ambiental</h2>
+      <p>
+        A conscientização sobre o defeso é essencial para garantir a sustentabilidade dos recursos pesqueiros. Educar pescadores, estudantes e comunidades ribeirinhas contribui diretamente para a preservação ambiental.
+      </p>
+    </section>
+  
+    <section class="mt-4">
+      <h2>Leis e Regulamentos</h2>
+      <ul>
+        <li>Lei nº 11.959/2009 – Política Nacional de Desenvolvimento Sustentável da Aquicultura e da Pesca</li>
+        <li>Instruções Normativas do IBAMA e do MAPA</li>
+        <li>Normas estaduais complementares (consulte órgãos locais)</li>
+      </ul>
+    </section>
+  
+    <section class="mt-4" id="simulador-info">
+      <h2>Como se inscrever no benefício do defeso?</h2>
+      <p>
+        Para se cadastrar e receber o benefício, o pescador artesanal precisa reunir os seguintes documentos:
+      </p>
+      <ul>
+        <li>Registro Geral da Pesca (RGP) ativo</li>
+        <li>Comprovante de residência</li>
+        <li>Declaração de atividade pesqueira (emitida por colônia ou sindicato)</li>
+        <li>Carteira de Trabalho com comprovação de atividade exclusiva na pesca</li>
+      </ul>
+      <p>
+        A inscrição deve ser feita através do <a href="https://www.gov.br/pt-br/servicos/requerer-o-seguro-defeso" target="_blank">site oficial do Governo Federal</a>.
+      </p>
+      <p>
+        Modelos de documentos:
+        <ul>
+          <li><a href="https://www.gov.br/pt-br/servicos/arquivos/seguro-defeso/modelo-de-declaracao.pdf" target="_blank">Modelo de Declaração de Atividade</a></li>
+          <li><a href="https://www.gov.br/pt-br/servicos/arquivos/seguro-defeso/requerimento-seguro-defeso.pdf" target="_blank">Requerimento de Seguro Defeso</a></li>
+        </ul>
+      </p>
+    </section>
+  
+    <section class="mt-4" id="quiz">
+      <h2>Quiz Educativo</h2>
+      <p>Teste seus conhecimentos sobre o defeso:</p>
+      <form id="quiz-form">
+        <div class="quiz-question">
+          <p><strong>1. O que é o período de defeso?</strong></p>
+          <label><input type="radio" name="q1" value="a"> Uma época de festa na pesca</label><br>
+          <label><input type="radio" name="q1" value="b"> Época de proteção à reprodução de peixes</label><br>
+          <label><input type="radio" name="q1" value="c"> Uma estação para pesca liberada</label>
+        </div>
+  
+        <div class="quiz-question">
+          <p><strong>2. Qual órgão é responsável pelo controle do defeso?</strong></p>
+          <label><input type="radio" name="q2" value="a"> INSS</label><br>
+          <label><input type="radio" name="q2" value="b"> IBAMA</label><br>
+          <label><input type="radio" name="q2" value="c"> MEC</label>
+        </div>
+  
+        <button type="submit">Ver Resultado</button>
+        <div id="quiz-result" class="mt-2"></div>
+      </form>
+    </section>
+  </main>
+  
+
+  <!-- Seções extras com links rápidos -->
+  <section class="atalhos">
+    <div class="atalho"><a href="simulador.html"><i class="bi bi-clipboard-plus"></i> Simulador de Inscrição</a></div>
+    <div class="atalho"><a href="educacao.html"><i class="bi bi-journal-richtext"></i> Educação Ambiental</a></div>
+    <div class="atalho"><a href="contato.html"><i class="bi bi-envelope"></i> Órgãos Responsáveis</a></div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>&copy; 2025 Projeto Interdisciplinar - Universidade CEUMA</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('quiz-form');
+      const result = document.getElementById('quiz-result');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let score = 0;
+        if (form.q1.value === 'b') score++;
+        if (form.q2.value === 'b') score++;
+        result.textContent = `Você acertou ${score} de 2 perguntas.`;
+      });
+    });
+  </script>
+</body>
+</html>
