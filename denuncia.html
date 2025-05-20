@@ -1,17 +1,83 @@
+<!-- Declara o tipo de documento HTML5 -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR"> <!-- Início da estrutura HTML e define o idioma como português do Brasil -->
 <head>
+  <!-- Define a codificação de caracteres como UTF-8 (suporta acentuação) -->
   <meta charset="UTF-8" />
+
+  <!-- Garante que o site seja exibido corretamente em dispositivos móveis -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título que aparece na aba do navegador -->
   <title>Denúncia de Pesca Ilegal</title>
+
+  <!-- Importa o arquivo CSS externo para estilização da página -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Importa ícones do Bootstrap (biblioteca de ícones) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <!-- Estilo personalizado diretamente no HTML (aplica-se à própria página) -->
+  <style>
+    /* Estilo para o rodapé */
+    .footer {
+      background-color: #004e64; /* cor de fundo azul escuro */
+      color: white; /* cor do texto branca */
+      text-align: center; /* centraliza o texto */
+      padding: 1rem 0; /* espaçamento interno */
+    }
+
+    /* Estilo do formulário de denúncia */
+    .formulario-denuncia {
+      background-color: #ffffff; /* fundo branco */
+      padding: 2rem;
+      border-radius: 8px; /* cantos arredondados */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* sombra ao redor */
+      margin-top: 2rem; /* espaçamento acima */
+    }
+
+    .formulario-denuncia h3 {
+      margin-bottom: 1rem; /* espaço abaixo do título */
+    }
+
+    .formulario-denuncia label {
+      display: block;
+      margin: 0.8rem 0 0.3rem; /* margem acima e abaixo */
+      font-weight: bold; /* texto em negrito */
+    }
+
+    .formulario-denuncia input,
+    .formulario-denuncia textarea {
+      width: 100%; /* ocupa toda a largura disponível */
+      padding: 0.7rem;
+      border: 1px solid #ccc; /* borda cinza clara */
+      border-radius: 5px;
+    }
+
+    .formulario-denuncia button {
+      margin-top: 1rem;
+      padding: 0.8rem 2rem;
+      background-color: #007b9e; /* cor azul */
+      color: white;
+      border: none; /* sem borda */
+      border-radius: 5px;
+      cursor: pointer; /* cursor de mão ao passar */
+    }
+
+    .formulario-denuncia button:hover {
+      background-color: #005e77; /* cor ao passar o mouse */
+    }
+  </style>
 </head>
+
+<!-- Corpo da página -->
 <body class="denuncia-page">
-  <!-- Navbar -->
+
+  <!-- Barra de navegação superior -->
   <nav class="navbar">
     <div class="container">
-      <h1>Período de Defeso</h1>
+      <h1>Período de Defeso</h1> <!-- Título/logo da navbar -->
+      <!-- Menu de navegação -->
       <ul class="nav-links">
         <li><a href="index.html">Início</a></li>
         <li><a href="regras.html">Regras</a></li>
@@ -23,51 +89,103 @@
     </div>
   </nav>
 
-  <!-- Conteúdo principal -->
-  <section class="content-container">
+  <!-- Conteúdo principal da página -->
+  <main class="content-container">
     <h2>Como Denunciar Pesca Ilegal</h2>
-    <p>Se você tem informações sobre pesca ilegal durante o período de defeso, é essencial denunciá-las para garantir a preservação da biodiversidade. Abaixo estão os canais oficiais para denúncias de crimes ambientais:</p>
+    <p>
+      Se você tem informações sobre pesca ilegal durante o período de defeso, é essencial denunciá-las...
+    </p>
 
-    <div class="denuncia-container">
-      <div class="denuncia-item">
+    <!-- Lista de órgãos ambientais com links -->
+    <section class="denuncia-container">
+      <article class="denuncia-item">
         <h4><a href="https://www.ibama.gov.br/" target="_blank">IBAMA - Instituto Brasileiro do Meio Ambiente</a></h4>
-        <p>O IBAMA é o órgão federal responsável por fiscalizar e combater a pesca ilegal. Você pode realizar denúncias diretamente no site ou pelo telefone <strong>0800 618080</strong>.</p>
-      </div>
-      <div class="denuncia-item">
-        <h4><a href="https://www.icmbio.gov.br/" target="_blank">ICMBio - Instituto Chico Mendes de Conservação da Biodiversidade</a></h4>
-        <p>O ICMBio é responsável pela gestão das unidades de conservação e também recebe denúncias sobre atividades ilegais no meio ambiente. Denuncie pelo site ou ligue para <strong>0800 618080</strong>.</p>
-      </div>
-      <div class="denuncia-item">
-        <h4><a href="https://www.mpf.mp.br/" target="_blank">MPF - Ministério Público Federal</a></h4>
-        <p>O MPF pode ser acionado em casos de crimes ambientais. Confira mais detalhes sobre como realizar a denúncia em seu <a href="https://www.mpf.mp.br/" target="_blank">site</a>.</p>
-      </div>
-    </div>
+        <p>O IBAMA é o órgão federal responsável por fiscalizar e combater a pesca ilegal...</p>
+      </article>
 
+      <article class="denuncia-item">
+        <h4><a href="https://www.icmbio.gov.br/" target="_blank">ICMBio - Instituto Chico Mendes</a></h4>
+        <p>O ICMBio é responsável pelas unidades de conservação e também recebe denúncias ambientais...</p>
+      </article>
+
+      <article class="denuncia-item">
+        <h4><a href="https://www.mpf.mp.br/" target="_blank">MPF - Ministério Público Federal</a></h4>
+        <p>O MPF pode ser acionado em casos de crimes ambientais...</p>
+      </article>
+    </section>
+
+    <!-- Lista com instruções para uma denúncia eficiente -->
     <h3>Como Fazer uma Denúncia Eficiente</h3>
-    <p>Para que a denúncia seja efetiva, é importante fornecer o máximo de detalhes possível. Aqui estão algumas informações que você deve coletar:</p>
     <ul>
-      <li><strong>Localização:</strong> Informe o local exato da atividade suspeita, incluindo coordenadas geográficas, se possível.</li>
-      <li><strong>Data e Hora:</strong> Anote quando a pesca ilegal aconteceu ou está acontecendo.</li>
-      <li><strong>Descrição da Atividade:</strong> Descreva o tipo de pesca ilegal que está sendo realizada (ex: uso de equipamentos proibidos, pesca em área de proteção, captura de espécies protegidas, etc.).</li>
-      <li><strong>Provas:</strong> Se possível, obtenha fotos ou vídeos como prova da atividade ilegal.</li>
-      <li><strong>Identificação dos Responsáveis:</strong> Caso saiba, informe quem são os responsáveis pela atividade.</li>
+      <li><strong>Localização:</strong> Informe o local exato da atividade suspeita...</li>
+      <li><strong>Data e Hora:</strong> Indique quando a atividade ocorreu...</li>
+      <li><strong>Descrição:</strong> Detalhe o tipo de pesca ilegal observada...</li>
+      <li><strong>Provas:</strong> Fotos ou vídeos ajudam a comprovar a denúncia.</li>
+      <li><strong>Identificação:</strong> Se souber, informe quem são os responsáveis.</li>
     </ul>
 
+    <!-- Links adicionais de denúncia -->
     <h3>Outros Canais de Denúncia</h3>
-    <p>Além dos sites e números de telefone listados acima, você pode realizar denúncias anônimas por meio das seguintes plataformas:</p>
     <ul>
       <li><a href="https://www.denuncie.icmbio.gov.br/" target="_blank">Sistema de Denúncia ICMBio</a></li>
       <li><a href="https://www.ibama.gov.br/denuncias" target="_blank">Sistema de Denúncia IBAMA</a></li>
     </ul>
-  </section>
 
-  <!-- Seções extras com links rápidos -->
+       <!-- Formulário de denúncia -->
+       <section class="formulario-denuncia">
+        <h3>Faça sua Denúncia</h3>
+
+       <!-- Envia os dados para o arquivo PHP que irá processar a denúncia -->
+        <form action="processar_denuncia.php" method="POST" enctype="multipart/form-data">
+
+        <!-- Campo de nome (opcional) -->
+        <label for="nome">Nome (opcional):</label>
+        <input type="text" name="nome" id="nome" />
+
+        <!-- Campo obrigatório de local -->
+        <!-- <label> exibe um texto descritivo para o campo de entrada. 
+         O atributo 'for' associa o texto ao input com id="local". -->
+         <label for="local">Local da Ocorrência:</label>
+
+        <!-- <input> cria o campo onde o usuário digita o local da ocorrência.
+         name="local": nome usado para identificar o valor no PHP.
+         id="local": liga ao <label> e pode ser usado por scripts ou CSS.
+         required: torna o preenchimento obrigatório antes de enviar. -->
+        <input type="text" name="local" id="local" required />
+
+
+        <!-- Campo obrigatório de data -->
+        <label for="data">Data da Ocorrência:</label>
+        <input type="date" name="data" id="data" required />
+
+        <!-- Campo obrigatório de descrição da denúncia -->
+        <label for="descricao">Descrição da Atividade:</label>
+        <textarea name="descricao" id="descricao" rows="4" required></textarea>
+
+        <!-- Upload opcional de arquivos (imagem ou vídeo) -->
+        <label for="arquivo">Enviar Provas (imagem ou vídeo):</label>
+        <input type="file" name="arquivo" id="arquivo" accept="image/*,video/*" />
+
+        <!-- Botão para enviar o formulário -->
+        <button type="submit">Enviar Denúncia</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Atalhos rápidos para outras páginas -->
   <section class="atalhos">
-    <div class="atalho"><a href="simulador.html"><i class="bi bi-clipboard-plus"></i> Simulador de Inscrição</a></div>
-    <div class="atalho"><a href="regras.html"><i class="bi bi-journal-text"></i> Regras do Defeso</a></div>
-    <div class="atalho"><a href="contato.html"><i class="bi bi-envelope"></i> Órgãos Responsáveis</a></div>
+    <div class="atalho">
+      <a href="simulador.html"><i class="bi bi-clipboard-plus"></i> Simulador de Inscrição</a>
+    </div>
+    <div class="atalho">
+      <a href="regras.html"><i class="bi bi-journal-text"></i> Regras do Defeso</a>
+    </div>
+    <div class="atalho">
+      <a href="contato.html"><i class="bi bi-envelope"></i> Órgãos Responsáveis</a>
+    </div>
   </section>
 
+  <!-- Rodapé com créditos do projeto -->
   <footer class="footer">
     <p>&copy; 2025 Projeto Interdisciplinar - Universidade CEUMA</p>
   </footer>

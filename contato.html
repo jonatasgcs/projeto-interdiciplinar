@@ -1,18 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Metadados da página -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fale Conosco - Período de Defeso</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Importa o CSS principal do site -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Estilo específico para o formulário -->
+  <style>
+    /* Estilo geral do formulário */
+    form {
+      background: #e7f0f7;
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+
+    /* Título do formulário */
+    form h2 {
+      color: #005f73;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    /* Parágrafos no formulário */
+    form p {
+      color: #0a3d62;
+      margin-bottom: 25px;
+      font-size: 1.1em;
+    }
+
+    /* Rótulos dos campos */
+    form label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #004d61;
+    }
+
+    /* Campos de entrada de texto, email e textarea */
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.8px solid #0077b6;
+      border-radius: 6px;
+      font-size: 1em;
+      color: #023e8a;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+
+    /* Estilo ao focar nos campos */
+    form input[type="text"]:focus,
+    form input[type="email"]:focus,
+    form textarea:focus {
+      border-color: #0096c7;
+      outline: none;
+      background-color: #dbefff;
+    }
+
+    /* Botão de envio */
+    form button {
+      background-color: #0077b6;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1em;
+      font-weight: 700;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Efeito hover no botão */
+    form button:hover {
+      background-color: #005f73;
+    }
+
+    /* Mensagem de sucesso */
+    .mensagem-feedback {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- Navbar -->
+
+  <!-- Barra de navegação principal -->
   <nav class="navbar">
     <div class="container">
       <h1>Período de Defeso</h1>
       <ul class="nav-links">
+        <!-- Links de navegação -->
         <li><a href="index.html">Início</a></li>
         <li><a href="regras.html">Regras</a></li>
         <li><a href="denuncia.html">Denúncia</a></li>
@@ -23,40 +111,93 @@
     </div>
   </nav>
 
-
-  <!-- Conteúdo Principal -->
+  <!-- Conteúdo principal da página -->
   <main class="conteudo">
     <h1>Fale Conosco</h1>
     <p>Confira abaixo os canais de atendimento dos principais órgãos responsáveis pela fiscalização e regulamentação do período de defeso no Brasil:</p>
 
+    <!-- Informações sobre o IBAMA -->
     <div class="orgao">
       <h2>IBAMA (Instituto Brasileiro do Meio Ambiente)</h2>
       <p>Responsável pela fiscalização ambiental e proteção da fauna aquática.</p>
       <p><strong>Site:</strong> <a href="https://www.gov.br/ibama" target="_blank">https://www.gov.br/ibama</a></p>
     </div>
 
+    <!-- Informações sobre o ICMBio -->
     <div class="orgao">
       <h2>ICMBio (Instituto Chico Mendes de Conservação da Biodiversidade)</h2>
       <p>Atua na conservação da biodiversidade e gestão de unidades de conservação.</p>
       <p><strong>Site:</strong> <a href="https://www.gov.br/icmbio" target="_blank">https://www.gov.br/icmbio</a></p>
     </div>
 
+    <!-- Informações sobre o MAPA -->
     <div class="orgao">
       <h2>MAPA (Ministério da Agricultura, Pecuária e Abastecimento)</h2>
       <p>Regulamenta as atividades de pesca e define os períodos de defeso.</p>
       <p><strong>Site:</strong> <a href="https://www.gov.br/agricultura" target="_blank">https://www.gov.br/agricultura</a></p>
     </div>
 
-    <div class="orgao">
-      <h2>ANEPAS (Associação Nacional de Ecologia e Pesca Esportiva)</h2>
-      <p>Promove ações de educação ambiental e defesa da pesca esportiva sustentável.</p>
-      <p><strong>Site:</strong> <a href="https://www.anepas.org.br" target="_blank">https://www.anepas.org.br</a></p>
-    </div>
+    <!-- Formulário para envio de feedback -->
+    <section id="feedback">
+      <form id="formFeedback">
+        <h2>Queremos ouvir você!</h2>
+        <p>Por favor, deixe seu feedback sobre nosso site:</p>
+
+        <!-- Campo nome -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <!-- Campo email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <!-- Campo mensagem -->
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <!-- Botão de envio -->
+        <button type="submit">Enviar Feedback</button>
+
+        <!-- Área para mensagem de retorno -->
+        <div class="mensagem-feedback" id="mensagemFeedback"></div>
+      </form>
+    </section>
   </main>
 
-  <!-- Rodapé -->
+  <!-- Rodapé do site -->
   <footer class="footer">
     <p>&copy; 2025 - Projeto Interdisciplinar CEUMA | Período de Defeso</p>
   </footer>
+
+  <!-- Script para enviar o formulário via AJAX -->
+  <script>
+    // Captura o evento de envio do formulário
+    document.getElementById('formFeedback').addEventListener('submit', function (e) {
+      e.preventDefault(); // Impede o envio tradicional
+
+      const formData = new FormData(this); // Cria objeto com os dados do formulário
+
+      // Envia os dados para o PHP via fetch
+      fetch('enviar_feedback.php', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.text()) // Lê a resposta como texto
+        .then(texto => {
+          // Remove qualquer tag HTML da resposta por segurança
+          const temp = document.createElement("div");
+          temp.innerHTML = texto;
+          document.getElementById('mensagemFeedback').innerText = temp.textContent || temp.innerText;
+
+          // Limpa o formulário
+          document.getElementById('formFeedback').reset();
+        })
+        .catch(() => {
+          // Exibe mensagem de erro caso falhe
+          document.getElementById('mensagemFeedback').innerText = 'Erro ao enviar o feedback. Tente novamente.';
+        });
+    });
+  </script>
+
 </body>
 </html>

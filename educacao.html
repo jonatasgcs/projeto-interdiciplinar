@@ -4,11 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Período de Defeso</title>
+  
+  <!-- Link para o arquivo de estilos CSS personalizado -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Ícones do Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 </head>
 <body>
-  <!-- Navbar -->
+
+  <!-- Navbar (menu superior do site) -->
   <nav class="navbar">
     <div class="container">
       <h1>Período de Defeso</h1>
@@ -23,7 +28,10 @@
     </div>
   </nav>
 
-  <main class="containe">
+  <!-- Conteúdo principal da página -->
+  <main class="containe"> <!-- OBS: "containe" pode estar com erro de digitação. O certo seria "container" -->
+    
+    <!-- Seção explicando o que é o defeso -->
     <section class="mt-4">
       <h2>O que é o Defeso?</h2>
       <p>
@@ -31,6 +39,7 @@
       </p>
     </section>
   
+    <!-- Seção sobre educação ambiental -->
     <section class="mt-4">
       <h2>Importância da Educação Ambiental</h2>
       <p>
@@ -38,6 +47,7 @@
       </p>
     </section>
   
+    <!-- Seção com as principais leis -->
     <section class="mt-4">
       <h2>Leis e Regulamentos</h2>
       <ul>
@@ -47,6 +57,7 @@
       </ul>
     </section>
   
+    <!-- Seção com informações sobre como se inscrever no benefício -->
     <section class="mt-4" id="simulador-info">
       <h2>Como se inscrever no benefício do defeso?</h2>
       <p>
@@ -59,7 +70,8 @@
         <li>Carteira de Trabalho com comprovação de atividade exclusiva na pesca</li>
       </ul>
       <p>
-        A inscrição deve ser feita através do <a href="https://www.gov.br/pt-br/servicos/requerer-o-seguro-defeso" target="_blank">site oficial do Governo Federal</a>.
+        A inscrição deve ser feita através do 
+        <a href="https://www.gov.br/pt-br/servicos/requerer-o-seguro-defeso" target="_blank">site oficial do Governo Federal</a>.
       </p>
       <p>
         Modelos de documentos:
@@ -70,6 +82,7 @@
       </p>
     </section>
   
+    <!-- Seção de quiz educativo -->
     <section class="mt-4" id="quiz">
       <h2>Quiz Educativo</h2>
       <p>Teste seus conhecimentos sobre o defeso:</p>
@@ -87,35 +100,44 @@
           <label><input type="radio" name="q2" value="b"> IBAMA</label><br>
           <label><input type="radio" name="q2" value="c"> MEC</label>
         </div>
-  
+
+        <!-- Botão para enviar respostas -->
         <button type="submit">Ver Resultado</button>
+        
+        <!-- Resultado do quiz será mostrado aqui -->
         <div id="quiz-result" class="mt-2"></div>
       </form>
     </section>
   </main>
   
-
-  <!-- Seções extras com links rápidos -->
+  <!-- Seção de atalhos rápidos para outras páginas -->
   <section class="atalhos">
     <div class="atalho"><a href="simulador.html"><i class="bi bi-clipboard-plus"></i> Simulador de Inscrição</a></div>
     <div class="atalho"><a href="educacao.html"><i class="bi bi-journal-richtext"></i> Educação Ambiental</a></div>
     <div class="atalho"><a href="contato.html"><i class="bi bi-envelope"></i> Órgãos Responsáveis</a></div>
   </section>
 
-  <!-- Rodapé -->
+  <!-- Rodapé da página -->
   <footer class="footer">
     <p>&copy; 2025 Projeto Interdisciplinar - Universidade CEUMA</p>
   </footer>
+
+  <!-- Script para corrigir o quiz -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const form = document.getElementById('quiz-form');
       const result = document.getElementById('quiz-result');
 
+      // Evento ao enviar o formulário
       form.addEventListener('submit', function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Impede o envio tradicional da página
         let score = 0;
+
+        // Verifica respostasS
         if (form.q1.value === 'b') score++;
         if (form.q2.value === 'b') score++;
+
+        // Mostra resultado
         result.textContent = `Você acertou ${score} de 2 perguntas.`;
       });
     });
